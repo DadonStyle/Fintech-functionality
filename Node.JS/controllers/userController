@@ -1,0 +1,34 @@
+const userCollection = require("../config");
+
+//handle add user
+const addUser = async (req, res) => {
+  const uid = req.params;
+  const data = req.body;
+  await userCollection.doc(uid.uid).set({
+    data,
+  });
+  res.send("logged in successfully"); //should return token
+};
+
+//need to save the logs, prob: he is replacing and not updating
+const currencyUserLogs = async (req, res) => {
+  const uid = req.params;
+  const data = req.body;
+  await userCollection.doc(uid.uid).update({
+    save: data,
+  });
+  res.send("Saved successfully"); //should return token
+};
+
+//delete user
+const deleteUser = async (req, res) => {
+  const id = req.params.id;
+  const user = await userCollection.doc(id).delete();
+  res.send("deleted");
+};
+
+module.exports = {
+  addUser,
+  deleteUser,
+  currencyUserLogs,
+};
