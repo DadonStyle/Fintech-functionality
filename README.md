@@ -1,6 +1,9 @@
 ## `So what do we have here ?`
 ## Using the FireBase auth + FireStore, 
-### - login using google, facebook or twitter
+### - login using `google`, `facebook` or `twitter`
+### - `Currency Convertor` using external API
+### - `Simple Table` with mock data
+### - DND and normal `file upload`
 
 
 ## `Installations` 🔧
