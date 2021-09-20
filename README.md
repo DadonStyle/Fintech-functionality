@@ -1,6 +1,6 @@
 ## `So what do we have here ?`
 Using the FireBase auth + FireStore, 
-# - login using google, facebook or twitter
+### - login using google, facebook or twitter
 
 
 ## `Installations` 🔧
